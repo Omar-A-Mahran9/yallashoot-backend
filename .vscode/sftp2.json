@@ -1,0 +1,12 @@
+{
+  "name": "My Server",
+  "host": "ftp://89.116.105.84",
+  "protocol": "ftp",
+  "port": 21,
+  "username": "u674533565.codeCar",
+  "password": "Oo-112233",
+  "remotePath": "/",
+  "uploadOnSave": true,
+  "useTempFile": false,
+  "openSsh": false
+}

@@ -1,0 +1,19 @@
+{
+    "name": "webstdy/notification",
+    "description": "Webstdy notification - A setup for Firebase notification",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Webstdy\\Notification\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "hossamghoneim",
+            "email": "hossamghoneim11@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
