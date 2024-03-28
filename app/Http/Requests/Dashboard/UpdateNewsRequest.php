@@ -30,7 +30,8 @@ class UpdateNewsRequest extends FormRequest
             // 'tags'          => ['required','string','max:255'],
             'description_ar' => ['required', 'string'],
             'description_en' => ['required', 'string'],
- 
+            'league_id'=>['required'],
+
             'main_image' => ['nullable', 'mimes:jpeg,png,jpg,webp,svg', 'max:2048'],
             'highlighted_image' => ['nullable', 'mimes:jpeg,png,jpg,webp,svg', 'max:2048'],
         ];

@@ -20,35 +20,24 @@ class RoleSeeder extends Seeder
         $categories  =
         [
             'employees',
-            'vendors',
-            'brands',
-            'models',
-            'categories',
-            'colors',
-            'cars',
+            'players',
+            'coaches',
+            'countries',
+            'continents',
+            'games',
+            'playground',
+            'league',
+            'team',
             'roles',
-            'tags',
             'contact_us',
-            'banks',
-            'Financing_companies',
-            'cities',
             'careers',
             'news',
             'branches',
             'faq',
             'settings',
-            'offers',
-            'orders',
-            'reports',
             'news_subscribers',
             'slider_dashboard',
             'recycle_bin',
-            'features',
-            'packages',
-            'delegates',
-            'finance_approvals',
-            'order_received',
-            'Distribution_of_Orders'
         ];
 
         $actions =
@@ -63,12 +52,12 @@ class RoleSeeder extends Seeder
         // indices of unused actions from the above array
         $exceptions = [
             'contact_us'            => [ 'unused_actions' => [ 1,2,4 ]       , 'extra_actions' => []          ],
-            'reports'               => [ 'unused_actions' => [ 1,2,3,4 ]                                      ],
-            'news_subscribers'      => [ 'unused_actions' => [ 1,2,3 ]                                        ],
-            'slider_dashboard'      => [ 'unused_actions' => [ 1,2,3,4 ]                                      ],
+            // 'reports'               => [ 'unused_actions' => [ 1,2,3,4 ]                                      ],
+            // 'news_subscribers'      => [ 'unused_actions' => [ 1,2,3 ]                                        ],
+            // 'slider_dashboard'      => [ 'unused_actions' => [ 1,2,3,4 ]                                      ],
             'recycle_bin'           => [ 'unused_actions' => [ 1,2,3 ]       , 'extra_actions' => ['restore'] ],
-            'Distribution_of_Orders'=> [ 'unused_actions' => [ 0,1,2,4 ]                                        ],
-            'order_received'        => [ 'unused_actions' => [ 0,1,2,3,4 ] ,              'extra_actions' => ['received']                          ],
+            // 'Distribution_of_Orders'=> [ 'unused_actions' => [ 0,1,2,4 ]                                        ],
+            // 'order_received'        => [ 'unused_actions' => [ 0,1,2,3,4 ] ,              'extra_actions' => ['received']                          ],
         ];
 
 

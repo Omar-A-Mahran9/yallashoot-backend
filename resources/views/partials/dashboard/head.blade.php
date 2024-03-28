@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="canonical" href="https://preview.keenthemes.com/metronic8" />
     <link rel="shortcut icon" type="image/gif" sizes="16x16"
-        href="{{ settings()->getSettings('favicon') ? getImagePathFromDirectory(settings()->getSettings('favicon'), 'Settings') : asset('favicon.png') }}" />
+        href="{{ settings()->getSettings('favicon') ? getImagePathFromDirectory(settings()->getSettings('favicon'), 'Settings') : asset('favicon.svg') }}" />
 
     <!--begin::Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">

@@ -14,51 +14,9 @@ class DashboardController extends Controller
     private static array $takenColors    = [];
     private static int   $lastColorIndex = 0;
 
-    public function index()
-    {
-        $carsMonthlyRate = $this->getMonthlyRate('cars');
-        $ordersMonthlyRate = $this->getMonthlyRate('orders');
-        // $clientsMonthlyRate = $this->getMonthlyRate('vendors');
-
-        $ordersTypesPercentage = Order::select('type')->get()->groupBy('type')->map(function ($orders) {
-
-            $type = $orders[0]['type'];
-
-            return
-            [
-                'label' => __(str_replace('_', ' ', $type)),
-                'data' => count($orders),
-                'color' => $this->getUniqueColor(),
-            ];
-
-        })->values()->toArray();
-
-        $carBrandsPercentage = Car::select('brand_id')->get()->groupBy('brand_id')->map(function ($cars) {
-
-            return
-                [
-                    'label' => $cars[0]['brand']['name'],
-                    'data' => count($cars),
-                    'color' => $this->getUniqueColor(),
-                ];
-        })->values();
-
-        $carOrdersBrandsPercentage = Order::with('car:id,brand_id')->whereNotNull('car_id')->select('car_id')->get()->groupBy('car.brand_id')->map(function ($orders) {
-
-            return
-                [
-                    'label' => $orders[0]['car']['brand']['name'] ,
-                    'data' => count($orders),
-                    'color' => $this->getUniqueColor(),
-                ];
-
-        })->values();
-
-
-        if ( count($ordersTypesPercentage) > 1)
-            $this->swapArrayElements($ordersTypesPercentage , 0);
-
-        return view('dashboard.index', compact('carsMonthlyRate', 'ordersMonthlyRate', 'ordersTypesPercentage','carBrandsPercentage','carOrdersBrandsPercentage'));
+    public function index(){
+ 
+        return view('dashboard.index');
 
     }
 

@@ -31,6 +31,7 @@ class StoreNewsRequest extends FormRequest
             'description_ar' => ['required', 'string'],
             'description_en' => ['required', 'string'],
             'main_image' => ['required', 'mimes:jpeg,png,jpg,webp,svg', 'max:2048'],
+            'league_id'=>['required']
             // 'highlighted_image' => ['required_with:highlighted_news', 'mimes:webp', 'max:2048'],
         ];
     }

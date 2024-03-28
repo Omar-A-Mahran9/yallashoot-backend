@@ -134,13 +134,13 @@
                         <!-- begin :: Column -->
                         <!-- <div class="col-md-6 fv-row">
 
-                                                                                <label class="fs-5 fw-bold mb-2">{{ __('tags') }}</label>
+                                                                                                                    <label class="fs-5 fw-bold mb-2">{{ __('tags') }}</label>
 
-                                                                                <input type="text" class="form-control" id="tags_inp" name="tags" placeholder="{{ __('Enter the tags of the news') }}" />
+                                                                                                                    <input type="text" class="form-control" id="tags_inp" name="tags" placeholder="{{ __('Enter the tags of the news') }}" />
 
-                                                                                <p class="invalid-feedback" id="tags"></p>
+                                                                                                                    <p class="invalid-feedback" id="tags"></p>
 
-                                                                            </div> -->
+                                                                                                                </div> -->
                         <!-- end   :: Column -->
 
                     </div>
@@ -173,7 +173,23 @@
 
                     </div>
                     <!-- end   :: Row -->
+                    <!-- begin :: Column -->
+                    <div class="row mb-10">
 
+                        <div class="col-md-12 fv-row">
+                            <label class="fs-5 fw-bold mb-2">{{ __('League') }}</label>
+                            <select class="form-select" data-control="select2" name="league_id" id="league_id-sp"
+                                data-placeholder="{{ __('choose league') }}"
+                                data-dir="{{ isArabic() ? 'rtl' : 'ltr' }}">
+                                <option value="" selected></option>
+                                @foreach ($leagues as $league)
+                                    <option value="{{ $league->id }}"> {{ $league->title }} </option>
+                                @endforeach
+                            </select>
+                            <p class="invalid-feedback" id="league_id"></p>
+                        </div>
+                    </div>
+                    <!-- end   :: Column -->
 
                 </div>
                 <!-- end   :: Inputs wrapper -->

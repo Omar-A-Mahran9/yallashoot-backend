@@ -41,7 +41,7 @@
             <div class="menu menu-column menu-title-gray-800 menu-state-title-primary menu-state-icon-primary menu-state-bullet-primary menu-arrow-gray-500"
                 id="#kt_aside_menu" data-kt-menu="true" data-kt-menu-expand="false">
 
-                @canany(['view_categories', 'view_brands', 'view_models', 'view_colors', 'view_tags', 'view_cars'])
+                {{-- @canany(['view_categories', 'view_brands', 'view_models', 'view_colors', 'view_tags', 'view_cars'])
                     <!-- begin :: cars section -->
                     <div class="menu-item">
                         <div class="menu-content pt-8 pb-0">
@@ -152,13 +152,13 @@
                             <span class="menu-title"> {{ __('Packages') }}</span>
                         </a>
                     </div>
-                @endcan
+                @endcan --}}
                 <!-- end   :: cars section -->
 
 
                 <!-- start   :: orders section -->
 
-                @canany(['view_orders'])
+                {{-- @canany(['view_orders'])
                     <div class="menu-item">
                         <div class="menu-content pt-8 pb-0">
                             <span class="menu-section text-muted text-uppercase fs-8 ls-1">{{ __('Orders') }}</span>
@@ -177,7 +177,7 @@
                             <span class="menu-title"> {{ __('Orders') }}</span>
                         </a>
                     </div>
-                @endcan
+                @endcan --}}
 
 
                 <!-- end   :: orders section -->
@@ -185,16 +185,16 @@
 
                 <!-- start   :: orders section -->
 
-                @canany(['view_vendors', 'view_contact_us', 'view_news_subscribers'])
+                {{-- @canany(['view_vendors', 'view_contact_us', 'view_news_subscribers'])
                     <div class="menu-item">
                         <div class="menu-content pt-8 pb-0">
                             <span class="menu-section text-muted text-uppercase fs-8 ls-1">{{ __('Vendors') }}</span>
                         </div>
                     </div>
                 @endcanany
+ --}}
 
-
-                @can('view_vendors')
+                {{-- @can('view_vendors')
                     <div class="menu-item">
                         <a class="menu-link {{ isTabActive('vendors') }}" href="{{ route('dashboard.vendors.index') }}"
                             data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click"
@@ -205,8 +205,115 @@
                             <span class="menu-title"> {{ __('Vendors') }}</span>
                         </a>
                     </div>
+                @endcan --}}
+                @can('view_continents')
+                    <div class="menu-item">
+                        <a class="menu-link {{ isTabActive('continent') }}" href="{{ route('dashboard.continent.index') }}"
+                            data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click"
+                            data-bs-placement="right">
+                            <span class="menu-icon">
+                                <i class="fa fa-globe"></i>
+                            </span>
+                            <span class="menu-title"> {{ __('continents') }}</span>
+                        </a>
+                    </div>
                 @endcan
-
+                @can('view_countries')
+                    <div class="menu-item">
+                        <a class="menu-link {{ isTabActive('country') }}" href="{{ route('dashboard.country.index') }}"
+                            data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click"
+                            data-bs-placement="right">
+                            <span class="menu-icon">
+                                <i class="fa fa-flag"></i>
+                            </span>
+                            <span class="menu-title"> {{ __('countries') }}</span>
+                        </a>
+                    </div>
+                @endcan
+                @can('view_coaches')
+                    <div class="menu-item">
+                        <a class="menu-link {{ isTabActive('coaches') }}" href="{{ route('dashboard.coache.index') }}"
+                            data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click"
+                            data-bs-placement="right">
+                            <span class="menu-icon">
+                                <i class="fas fa-user-tie"></i>
+                            </span>
+                            <span class="menu-title"> {{ __('coaches') }}</span>
+                        </a>
+                    </div>
+                @endcan
+                @can('view_team')
+                    <div class="menu-item">
+                        <a class="menu-link {{ isTabActive('team') }}" href="{{ route('dashboard.team.index') }}"
+                            data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click"
+                            data-bs-placement="right">
+                            <span class="menu-icon">
+                                <i class="fa fa-users"></i>
+                            </span>
+                            <span class="menu-title"> {{ __('Teams') }}</span>
+                        </a>
+                    </div>
+                @endcan
+                @can('view_players')
+                    <div class="menu-item">
+                        <a class="menu-link {{ isTabActive('players') }}" href="{{ route('dashboard.player.index') }}"
+                            data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click"
+                            data-bs-placement="right">
+                            <span class="menu-icon">
+                                <i class="fa fa-child"></i>
+                            </span>
+                            <span class="menu-title"> {{ __('players') }}</span>
+                        </a>
+                    </div>
+                @endcan
+                @can('view_playground')
+                    <div class="menu-item">
+                        <a class="menu-link {{ isTabActive('playground') }}"
+                            href="{{ route('dashboard.playground.index') }}" data-bs-toggle="tooltip"
+                            data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
+                            <span class="menu-icon">
+                                <i class="fa fa-building"></i>
+                            </span>
+                            <span class="menu-title"> {{ __('playgrounds') }}</span>
+                        </a>
+                    </div>
+                @endcan
+                @can('view_games')
+                    <div class="menu-item">
+                        <a class="menu-link {{ isTabActive('games') }}" href="{{ route('dashboard.games.index') }}"
+                            data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click"
+                            data-bs-placement="right">
+                            <span class="menu-icon">
+                                <i class="fa fa-gamepad"></i>
+                            </span>
+                            <span class="menu-title"> {{ __('games') }}</span>
+                        </a>
+                    </div>
+                @endcan
+                @can('view_league')
+                    <div class="menu-item">
+                        <a class="menu-link {{ isTabActive('league') }}" href="{{ route('dashboard.league.index') }}"
+                            data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click"
+                            data-bs-placement="right">
+                            <span class="menu-icon">
+                                <i class="fa fa-futbol"></i>
+                            </span>
+                            <span class="menu-title"> {{ __('League') }}</span>
+                        </a>
+                    </div>
+                @endcan
+                @can('view_news')
+                    <div class="menu-item">
+                        <a class="menu-link {{ isTabActive('news') }}" href="{{ route('dashboard.news.index') }}"
+                            data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click"
+                            data-bs-placement="right">
+                            <span class="menu-icon">
+                                <i class="fa fa-newspaper"></i>
+                            </span>
+                            <span class="menu-title"> {{ __('News') }}</span>
+                        </a>
+                    </div>
+                @endcan
 
                 @can('view_contact_us')
                     <div class="menu-item">
@@ -235,7 +342,7 @@
                 <!-- end   :: vendors section -->
 
                 <!-- start :: finance approvals -->
-                @canany(['view_finance_approvals'])
+                {{-- @canany(['view_finance_approvals'])
                     <div class="menu-item">
                         <div class="menu-content pt-8 pb-0">
                             <span
@@ -255,10 +362,10 @@
                             <span class="menu-title"> {{ __('Finance approvals') }}</span>
                         </a>
                     </div>
-                @endcan
+                @endcan --}}
                 <!-- end :: finance approvals -->
 
-                @canany(['view_careers', 'view_news', 'view_faq', 'view_services', 'view_offers'])
+                {{-- @canany(['view_careers', 'view_news', 'view_faq', 'view_services', 'view_offers'])
                     <div class="menu-item">
                         <div class="menu-content pt-8 pb-0">
                             <span class="menu-section text-muted text-uppercase fs-8 ls-1">{{ __('Website') }}</span>
@@ -277,23 +384,11 @@
                             <span class="menu-title"> {{ __('Careers') }}</span>
                         </a>
                     </div>
-                @endcan
+                @endcan --}}
 
 
-                @can('view_news')
-                    <div class="menu-item">
-                        <a class="menu-link {{ isTabActive('news') }}" href="{{ route('dashboard.news.index') }}"
-                            data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click"
-                            data-bs-placement="right">
-                            <span class="menu-icon">
-                                <i class="fa fa-newspaper"></i>
-                            </span>
-                            <span class="menu-title"> {{ __('News') }}</span>
-                        </a>
-                    </div>
-                @endcan
 
-
+                {{-- 
                 @can('view_faq')
                     <div class="menu-item">
                         <a class="menu-link {{ isTabActive('faqs') }}" href="{{ route('dashboard.faqs.index') }}"
@@ -305,8 +400,8 @@
                             <span class="menu-title"> {{ __('FAQ') }}</span>
                         </a>
                     </div>
-                @endcan
-
+                @endcan --}}
+                {{-- 
 
                 @can('view_offers')
                     <div class="menu-item">
@@ -390,7 +485,7 @@
                         @endcan <!--end:Menu item--><!--begin:Menu item-->
 
                     </div><!--end:Menu sub-->
-                </div>
+                </div> --}}
                 {{-- 
                 @can('view_banks')
                     <div class="menu-item">
@@ -430,7 +525,7 @@
                         </a>
                     </div>
                 @endcan
-                @can('view_delegates')
+                {{-- @can('view_delegates')
                     <div class="menu-item">
                         <a class="menu-link {{ isTabActive('delegates') }}"
                             href="{{ route('dashboard.delegates.index') }}" data-bs-toggle="tooltip"
@@ -442,7 +537,7 @@
                             <span class="menu-title"> {{ __('Delegates') }}</span>
                         </a>
                     </div>
-                @endcan
+                @endcan --}}
                 @can('view_settings')
                     <div class="menu-item">
                         <a class="menu-link {{ isTabActive('settings') }}"
@@ -456,7 +551,7 @@
                     </div>
                 @endcan
 
-                @can('view_recycle_bin')
+                {{-- @can('view_recycle_bin')
                     <div class="menu-item">
                         <a class="menu-link {{ isTabActive('trash') }}" href="{{ route('dashboard.trash') }}"
                             data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click"
@@ -467,7 +562,7 @@
                             <span class="menu-title"> {{ __('Recycle Bin') }}</span>
                         </a>
                     </div>
-                @endcan
+                @endcan --}}
 
 
             </div>

@@ -41,6 +41,15 @@ class RoleController extends Controller
         'Distribution_of_Orders',
         'slider_dashboard',
         'recycle_bin',
+        'players',
+        'playground',
+        'games',
+        'coaches',
+        'countries',
+        'continents',
+        'league',
+        'team',
+
     ];
 
     public function index()

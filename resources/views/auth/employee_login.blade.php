@@ -5,13 +5,13 @@
 
 <head>
     <base href="../../../">
-    <title>{{ __('CodeCar - Dashboard') }}</title>
+    <title>{{ __('yalla shoot - Dashboard') }}</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="article" />
-    <link rel="shortcut icon" href="{{ asset('favicon.png') }}" />
+    <link rel="shortcut icon" href="{{ asset('favicon.svg') }}" />
 
     <!--begin::Fonts-->
     @if (isArabic())
@@ -42,7 +42,8 @@
     <div class="d-flex flex-column flex-root">
         <!--begin::Authentication - Sign-in -->
         <div class="d-flex flex-column flex-column-fluid bgi-position-y-bottom position-x-center bgi-no-repeat bgi-size-contain bgi-attachment-fixed"
-            style="">
+            style="background-image: url('{{ asset('dashboard-assets/yllashoot.jpeg') }}'); background-size: cover; ">
+
             <!--begin::Content-->
             <div class="d-flex flex-center flex-column flex-column-fluid p-10 pb-lg-20">
                 <!--begin::Logo-->
@@ -58,10 +59,11 @@
                         data-redirection-url="{{ str_contains('/dashboard', URL::previous()) ? URL::previous() : '/dashboard' }}"
                         id="submitted-form" action="{{ route('employee.login') }}" method="POST">
                         @csrf
+
                         <!--begin::Heading-->
                         <div class="text-center mb-10">
                             <!--begin::Title-->
-                            <h1 class="text-dark mb-3">{{ __('Sign In to CodeCar') }}</h1>
+                            <h1 class="text-dark mb-3">{{ __('Sign In to kora live') }}</h1>
                             <!--end::Title-->
                         </div>
                         <!--begin::Heading-->
@@ -128,10 +130,7 @@
             <div class="d-flex flex-center flex-column-auto p-10">
                 <!--begin::Links-->
                 <div class="d-flex align-items-center fw-bold fs-6">
-                    <a href="https://webstdy.com/{{ getLocale() }}" target="_blank"
-                        class="text-muted text-hover-primary px-2">
-                        {{ __('Developed By') }} <img class="mx-4" src="https://webstdy.com/CDN/cr_dark.png">
-                    </a>
+
 
                 </div>
                 <!--end::Links-->

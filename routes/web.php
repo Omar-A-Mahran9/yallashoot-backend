@@ -17,7 +17,7 @@ Route::group(['namespace' => 'Auth' , 'middleware' => 'set_locale'] , function (
     Route::post('employee/logout','EmployeeAuthController@logout')->name('employee.logout');
 
     // user login routes
-    Route::get('employee/login','EmployeeAuthController@showLoginForm')->name('employee.login-form');
+    // Route::get('employee/login','EmployeeAuthController@showLoginForm')->name('employee.login-form');
 });
 
 Route::group(['namespace' => 'Home' , 'middleware' => 'set_locale', 'as' => 'home.'] , function () {

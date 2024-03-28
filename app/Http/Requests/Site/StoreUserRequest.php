@@ -27,7 +27,7 @@ class StoreUserRequest extends FormRequest
     {
         return [
             'name' => ['required','string','max:255','unique:vendors,name',new NotNumbersOnly()],
-            'phone' => ['required','string','unique:vendors,phone','regex:/^((\+|00)966|0)?5[0-9]{8}$/'],
+            'email' => ['required','string','regex:/^((\+|00)966|0)?5[0-9]{8}$/'],
             'identity_no' => 'required_if:type,individual|nullable|unique:vendors,identity_no|numeric|digits:10',      
             'commercial_registration_no' => 'required_if:type,exhibition,agency|nullable|unique:vendors,commercial_registration_no',
             'password' => ['required', 'string', 'min:8', 'max:255', 'confirmed',new PasswordValidate()],

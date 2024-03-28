@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Dashboard;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Dashboard\StoreNewsRequest;
 use App\Http\Requests\Dashboard\UpdateNewsRequest;
+use App\Models\League;
 use App\Models\News;
 use App\Models\NewsSubscriber;
 use Illuminate\Http\Request;
@@ -14,7 +15,7 @@ class NewsController extends Controller
 {
     public function index(Request $request)
     {
-        $this->authorize('view_news');
+         $this->authorize('view_news');
 
         if ($request->ajax())
         {
@@ -28,25 +29,30 @@ class NewsController extends Controller
 
     public function create()
     {
-        $this->authorize('create_news');
+        $leagues=League::get();
+         $this->authorize('create_news');
 
-        return view('dashboard.news.create');
+        return view('dashboard.news.create',compact('leagues'));
     }
 
 
     public function edit(News $news)
     {
+        $leagues=League::get();
+
         $this->authorize('update_news');
 
-        return view('dashboard.news.edit',compact('news'));
+        return view('dashboard.news.edit',compact('news','leagues'));
     }
 
 
     public function show(News $news)
     {
+        $leagues=League::get();
+
         $this->authorize('show_news');
 
-        return view('dashboard.news.show',compact('news'));
+        return view('dashboard.news.show',compact('news','leagues'));
     }
 
     public function store(StoreNewsRequest $request)

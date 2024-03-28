@@ -3,8 +3,7 @@
 namespace App\Http\Classes;
 
 use App\Models\Setting;
-use App\Models\SettingOrderStatus;
-
+ 
 class AppSetting
 {
    private $settingsFile;
@@ -31,10 +30,7 @@ class AppSetting
         return $setting->option_value?? null;
    }
 
-   public function getOrdersStatus($key = null){
-        $settingOrderStatus = SettingOrderStatus::get();
-        return $settingOrderStatus;
-    }
+ 
     public function set($key,$value) // set a new key with the given value
     {
 

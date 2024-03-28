@@ -17,11 +17,11 @@ class SettingSeeder extends Seeder
         $data = [
             [
                 'option_name' => 'website_name_ar',
-                'option_value' => 'كود كار'
+                'option_value' => 'كورة لايف'
             ],
             [
                 'option_name' => 'website_name_en',
-                'option_value' => 'CodeCar'
+                'option_value' => 'Kora live'
             ],
             [
                 'option_name' => 'about_us_video',

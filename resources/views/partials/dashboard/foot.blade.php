@@ -2,7 +2,6 @@
     let imagesBasePath = "{{ asset('/storage/Images') }}";
     let currency = " {{ __(settings()->getSettings('currency')) }} ";
     let locale = "{{ getLocale() }}";
-    let ordersStatuses = @json(settings()->getOrdersStatus());
     var faviconPath = '{{ asset(getImagePathFromDirectory(settings()->getSettings('favicon'), 'Settings')) }}';
 </script>
 <script src="{{ asset('dashboard-assets/plugins/global/plugins.bundle.js') }}"></script>

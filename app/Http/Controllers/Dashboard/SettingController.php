@@ -8,8 +8,7 @@ use App\Models\RevSlider;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Dashboard\StoreSettingRequest;
-use App\Models\SettingOrderStatus;
-
+ 
 class SettingController extends Controller
 {
     public function index()
@@ -20,9 +19,8 @@ class SettingController extends Controller
         $fullYoutubeUrl = ($aboutUsVideoId) ? $this->getYoutubeVideoUrl($aboutUsVideoId) : null;
         $this->authorize('view_settings');
         $settings      = Setting::get();
-        $orderStatuses = SettingOrderStatus::get();
-        // return view('dashboard.settings', compact('sliders'));
-        return view('dashboard.settings', compact('settings', 'orderStatuses','fullYoutubeUrl'));
+         // return view('dashboard.settings', compact('sliders'));
+        return view('dashboard.settings', compact('settings','fullYoutubeUrl'));
     }
 
     protected function getYoutubeVideoUrl($videoId)
@@ -65,23 +63,7 @@ class SettingController extends Controller
         $deletestatues=$request->deletedstatus[0];
         $deletedIdsArray = explode(',', $deletestatues);
         $deletedIdsArray = array_map('intval', $deletedIdsArray);
-        if($deletestatues){
-            foreach ($deletedIdsArray as $id) {
-                $statue=SettingOrderStatus::findOrFail($id);
-                $statue->delete();
-             }
-        }
-          foreach ($data['orders_statuses'] as $order)
-        {
-            
-         $orderitem=SettingOrderStatus::find($order['id']);
-         if($orderitem){
-             $orderitem->update($order);
-         }
-         else{
-            SettingOrderStatus::create($order);
-         }
-        }
+    
         foreach ($data as $key => $value)
         {
           Setting::where('option_name', $key)->update(['option_value' => $value]);
