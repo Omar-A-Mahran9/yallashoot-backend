@@ -158,8 +158,11 @@ return [
 
 
     'attributes' => [
+        "country_id"=>"الدولة",
         'about_us_video'=>"فيديو من نحن",
         'whatsapp'=>'الواتساب',
+        'commenter_name_en'=>'اسم المعلق بالانجليزية',
+        'commenter_name_ar'=>'اسم المعلق بالانجليزية',
         'email' => 'البريد الإلكتروني',
         'phone' => 'الهاتف',
         'name_en' => 'الإسم باللغة الإنجليزية',
@@ -353,9 +356,12 @@ return [
         'cv' => 'السيرة الذاتية',
         'comment' => 'التعليق',
         'message' => 'الرسالة',
-        'orders_statuses.*.name_ar' => 'اسم الحالة بالعربية',
-        'orders_statuses.*.name_en' => 'اسم الحالة بالإنجليوية',
-        'orders_statuses.*.name_color' => 'لون الحالة',
+        'satellites.*.name' => 'اسم القمر الصناعي ',
+        'satellites.*.frequency' => 'التردد',
+        'satellites.*.polarization' => 'الاستقطاب',
+        'satellites.*.modulation' => 'الترميز',
+        'satellites.*.correction' => 'التصحيح',
+        'satellites.*.encryption' => 'التشفير',
         'offer_ar' => 'العرض بالعربية',
         'offer_en' => 'العرض بالانجليزية',
         "salary" => "مبلغ الراتب في الصراف",

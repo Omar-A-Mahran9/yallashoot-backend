@@ -3,6 +3,9 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Dashboard\StorePlaygroundRequest;
+use App\Http\Requests\Dashboard\UpdatePlaygroundRequest;
+use App\Models\Playground;
 use Illuminate\Http\Request;
 
 class PlaygroundController extends Controller
@@ -12,74 +15,77 @@ class PlaygroundController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
-    }
+        $this->authorize('view_playground');
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+        if ($request->ajax())
+        {
+            $data = getModelData(model: new Playground());
+      
+             return response()->json($data);
+        }
+
+        return view('dashboard.playgrounds.index');
+    }
+ 
     public function create()
     {
-        //
+        $this->authorize('create_playground');
+    
+        return view('dashboard.playgrounds.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+  
+    public function store(StorePlaygroundRequest $request)
     {
-        //
+          $this->authorize('create_playground');
+        $data=$request->validated();
+        if ($request->file('main_image'))
+        $data['main_image'] = uploadImage( $request->file('main_image') , "Playgrounds");
+
+        Playground::create($data);
+
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
+  
+    public function show(Playground $playground)
     {
-        //
+        $this->authorize('show_playground');
+        return view('dashboard.playgrounds.show',compact('playground'));
+
+    }
+ 
+    public function edit(Playground $playground)
+    {
+        $this->authorize('update_playground');
+        return view('dashboard.playgrounds.edit',compact('playground'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
+    
+    public function update(UpdatePlaygroundRequest $request, Playground $playground)
     {
-        //
+        $this->authorize('update_playground');
+        $data=$request->validated();
+
+        if ($request->file('main_image'))
+        {
+            deleteImage( $playground['main_image'] , "Playgrounds");
+            $data['main_image'] = uploadImage( $request->file('main_image') , "Playgrounds");
+        }
+        $playground->update($data);
+
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
+  
+    public function destroy(Request $request,Playground $playground)
     {
-        //
-    }
+        $this->authorize('delete_playground');
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+        if($request->ajax())
+        {
+            $playground->delete();
+            deleteImage($playground->main_image , 'Playgrounds' );
+        }
     }
 }

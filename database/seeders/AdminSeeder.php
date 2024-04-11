@@ -16,10 +16,10 @@ class AdminSeeder extends Seeder
     public function run()
     {
         Employee::create([
-            'name' => 'yallashoot',
-            'email' => 'yallashoot@gmail.com',
-            'password' => 'yallashoot1122334455',
-            'phone' => '966511223344',
+            'name' => '،Kora Live',
+            'email' => 'koralive@gmail.com',
+            'password' => 'koralive1122334455',
+            'phone' => '511223344',
         ]);
 
         Employee::create([

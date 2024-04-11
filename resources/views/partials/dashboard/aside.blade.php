@@ -41,171 +41,6 @@
             <div class="menu menu-column menu-title-gray-800 menu-state-title-primary menu-state-icon-primary menu-state-bullet-primary menu-arrow-gray-500"
                 id="#kt_aside_menu" data-kt-menu="true" data-kt-menu-expand="false">
 
-                {{-- @canany(['view_categories', 'view_brands', 'view_models', 'view_colors', 'view_tags', 'view_cars'])
-                    <!-- begin :: cars section -->
-                    <div class="menu-item">
-                        <div class="menu-content pt-8 pb-0">
-                            <span class="menu-section text-muted text-uppercase fs-8 ls-1">{{ __('Cars') }}</span>
-                        </div>
-                    </div>
-                @endcanany
-
-
-                @can('view_brands')
-                    <div class="menu-item">
-                        <a class="menu-link {{ isTabActive('brands') }}" href="{{ route('dashboard.brands.index') }}"
-                            data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click"
-                            data-bs-placement="right">
-                            <span class="menu-icon">
-                                <i class="fa fa-list"></i>
-                            </span>
-                            <span class="menu-title"> {{ __('Brands') }}</span>
-                        </a>
-                    </div>
-                @endcan
-
-                @can('view_models')
-                    <div class="menu-item">
-                        <a class="menu-link {{ isTabActive('models') }}" href="{{ route('dashboard.models.index') }}"
-                            data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click"
-                            data-bs-placement="right">
-                            <span class="menu-icon">
-                                <i class="fa fa-hashtag"></i>
-                            </span>
-                            <span class="menu-title"> {{ __('Models') }}</span>
-                        </a>
-                    </div>
-                @endcan
-
-                @can('view_categories')
-                    <div class="menu-item">
-                        <a class="menu-link {{ isTabActive('categories') }}"
-                            href="{{ route('dashboard.categories.index') }}" data-bs-toggle="tooltip"
-                            data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
-                            <span class="menu-icon">
-                                <i class="fa fa-book"></i>
-                            </span>
-                            <span class="menu-title"> {{ __('Categories') }}</span>
-                        </a>
-                    </div>
-                @endcan
-
-                @can('view_colors')
-                    <div class="menu-item">
-                        <a class="menu-link {{ isTabActive('colors') }}" href="{{ route('dashboard.colors.index') }}"
-                            data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click"
-                            data-bs-placement="right">
-                            <span class="menu-icon">
-                                <i class="fa fa-palette"></i>
-                            </span>
-                            <span class="menu-title"> {{ __('Colors') }}</span>
-                        </a>
-                    </div>
-                @endcan
-
-                @can('view_tags')
-                    <div class="menu-item">
-                        <a class="menu-link {{ isTabActive('tags') }}" href="{{ route('dashboard.tags.index') }}"
-                            data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click"
-                            data-bs-placement="right">
-                            <span class="menu-icon">
-                                <i class="fa fa-tag"></i>
-                            </span>
-                            <span class="menu-title"> {{ __('Tags') }}</span>
-                        </a>
-                    </div>
-                @endcan
-
-                @can('view_cars')
-                    <div class="menu-item">
-                        <a class="menu-link {{ isTabActive('cars') }}" href="{{ route('dashboard.cars.index') }}"
-                            data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click"
-                            data-bs-placement="right">
-                            <span class="menu-icon">
-                                <i class="fa fa-car"></i>
-                            </span>
-                            <span class="menu-title"> {{ __('Cars') }}</span>
-                        </a>
-                    </div>
-                @endcan
-
-                @can('view_features')
-                    <div class="menu-item">
-                        <a class="menu-link {{ isTabActive('features') }}"
-                            href="{{ route('dashboard.features.index') }}" data-bs-toggle="tooltip"
-                            data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
-                            <span class="menu-icon">
-                                <i class="fa fa-list"></i>
-                            </span>
-                            <span class="menu-title"> {{ __('Features') }}</span>
-                        </a>
-                    </div>
-                @endcan
-                @can('view_packages')
-                    <div class="menu-item">
-                        <a class="menu-link {{ isTabActive('packages') }}"
-                            href="{{ route('dashboard.packages.index') }}" data-bs-toggle="tooltip"
-                            data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
-                            <span class="menu-icon">
-                                <i class="fa fa-list"></i>
-                            </span>
-                            <span class="menu-title"> {{ __('Packages') }}</span>
-                        </a>
-                    </div>
-                @endcan --}}
-                <!-- end   :: cars section -->
-
-
-                <!-- start   :: orders section -->
-
-                {{-- @canany(['view_orders'])
-                    <div class="menu-item">
-                        <div class="menu-content pt-8 pb-0">
-                            <span class="menu-section text-muted text-uppercase fs-8 ls-1">{{ __('Orders') }}</span>
-                        </div>
-                    </div>
-                @endcanany
-
-                @can('view_orders')
-                    <div class="menu-item">
-                        <a class="menu-link {{ isTabActive('orders') }}" href="{{ route('dashboard.orders.index') }}"
-                            data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click"
-                            data-bs-placement="right">
-                            <span class="menu-icon">
-                                <i class="fa fa-users"></i>
-                            </span>
-                            <span class="menu-title"> {{ __('Orders') }}</span>
-                        </a>
-                    </div>
-                @endcan --}}
-
-
-                <!-- end   :: orders section -->
-
-
-                <!-- start   :: orders section -->
-
-                {{-- @canany(['view_vendors', 'view_contact_us', 'view_news_subscribers'])
-                    <div class="menu-item">
-                        <div class="menu-content pt-8 pb-0">
-                            <span class="menu-section text-muted text-uppercase fs-8 ls-1">{{ __('Vendors') }}</span>
-                        </div>
-                    </div>
-                @endcanany
- --}}
-
-                {{-- @can('view_vendors')
-                    <div class="menu-item">
-                        <a class="menu-link {{ isTabActive('vendors') }}" href="{{ route('dashboard.vendors.index') }}"
-                            data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click"
-                            data-bs-placement="right">
-                            <span class="menu-icon">
-                                <i class="fa fa-users"></i>
-                            </span>
-                            <span class="menu-title"> {{ __('Vendors') }}</span>
-                        </a>
-                    </div>
-                @endcan --}}
                 @can('view_continents')
                     <div class="menu-item">
                         <a class="menu-link {{ isTabActive('continent') }}" href="{{ route('dashboard.continent.index') }}"
@@ -232,7 +67,7 @@
                 @endcan
                 @can('view_coaches')
                     <div class="menu-item">
-                        <a class="menu-link {{ isTabActive('coaches') }}" href="{{ route('dashboard.coache.index') }}"
+                        <a class="menu-link {{ isTabActive('coache') }}" href="{{ route('dashboard.coache.index') }}"
                             data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click"
                             data-bs-placement="right">
                             <span class="menu-icon">
@@ -256,7 +91,7 @@
                 @endcan
                 @can('view_players')
                     <div class="menu-item">
-                        <a class="menu-link {{ isTabActive('players') }}" href="{{ route('dashboard.player.index') }}"
+                        <a class="menu-link {{ isTabActive('player') }}" href="{{ route('dashboard.player.index') }}"
                             data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click"
                             data-bs-placement="right">
                             <span class="menu-icon">
@@ -275,6 +110,20 @@
                                 <i class="fa fa-building"></i>
                             </span>
                             <span class="menu-title"> {{ __('playgrounds') }}</span>
+                        </a>
+                    </div>
+                @endcan
+                @can('view_channel')
+                    <div class="menu-item">
+                        <a class="menu-link {{ isTabActive('channel') }}" href="{{ route('dashboard.channel.index') }}"
+                            data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click"
+                            data-bs-placement="right">
+                            <span class="menu-icon">
+                                <i
+                                    class="fas fa-check-circle"></i>
+                            </span>
+                            <span class="menu-title">
+                                    {{ __('channels') }}</span>
                         </a>
                     </div>
                 @endcan
@@ -328,16 +177,18 @@
                     </div>
                 @endcan
 
-                {{-- @can('view_news_subscribers')
+                @can('view_news_subscribers')
                     <div class="menu-item">
-                        <a class="menu-link {{ isTabActive('news-subscribers') }}" href="{{ route('dashboard.news-subscribers.index') }}"  data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
-                        <span class="menu-icon">
+                        <a class="menu-link {{ isTabActive('news-subscribers') }}"
+                            href="{{ route('dashboard.news-subscribers.index') }}" data-bs-toggle="tooltip"
+                            data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
+                            <span class="menu-icon">
                                 <i class="fas fa-newspaper"></i>
-                        </span>
-                            <span class="menu-title"> {{ __("News Subscribers") }}</span>
+                            </span>
+                            <span class="menu-title"> {{ __('News Subscribers') }}</span>
                         </a>
                     </div>
-                @endcan --}}
+                @endcan
 
                 <!-- end   :: vendors section -->
 

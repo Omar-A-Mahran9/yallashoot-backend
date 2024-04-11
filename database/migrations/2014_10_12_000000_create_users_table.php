@@ -20,8 +20,7 @@ class CreateUsersTable extends Migration
             $table->string('id_number')->nullable()->unique();
             $table->string('commercial_register_namber')->nullable()->unique();
             $table->foreignId('city_id')->constrained('cities')->onUpdate('cascade')->onDelete('cascade');
-            $table->foreignId('user_type')->constrained('user_types')->onUpdate('cascade')->onDelete('cascade');
-            $table->string('password');
+             $table->string('password');
             $table->string('otp')->nullable();
             $table->timestamp('verified_at')->nullable();
             $table->timestamp('email_verified_at')->nullable();

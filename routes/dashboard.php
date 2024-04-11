@@ -21,11 +21,12 @@ Route::group(['prefix' => 'dashboard', 'namespace' => 'Dashboard', 'as' => 'dash
     Route::resource('league', 'LeagueController');
     Route::resource('continent', 'ContinentController');
     Route::resource('country', 'CountryController');
-    Route::resource('coache', 'CoacheController');
+    Route::resource('coache', 'CoachController');
     Route::resource('player', 'PlayerController');
     Route::resource('playground', 'PlaygroundController');
     Route::resource('games', 'GamesController');
     Route::resource('team', 'TeamController');
+    Route::resource('channel', 'ChannelController');
 
 
 
@@ -34,8 +35,7 @@ Route::group(['prefix' => 'dashboard', 'namespace' => 'Dashboard', 'as' => 'dash
     Route::post('/calculate-installment', 'DashboardController@calculateInstallment')->name('calculateInstallment');
     Route::get('/get-models/{brandId}', [CarController::class, 'getModels']);
     Route::get('/get-categories/{modelId}', [CarController::class, 'getcategories']);
-    Route::get('/delegate/fetch', [DelegatesController::class, 'fetchDelegate']);
-
+ 
     /** resources routes **/
     Route::resource('orders', 'OrderController');
     Route::resource('roles', 'RoleController');

@@ -18,12 +18,7 @@ class User extends Authenticatable
     protected $casts = ['created_at' => 'date:Y-m-d', 'updated_at' => 'date:Y-m-d'];
     protected $hidden = ['password', 'remember_token'];
 
-    public function type()
-    {
-        return $this->hasOne(UserType::class, 'id', 'user_type');
-    }
+ 
 
-    public function favorites(){
-        return $this->hasMany(Favorite::class);
-    }
+  
 }

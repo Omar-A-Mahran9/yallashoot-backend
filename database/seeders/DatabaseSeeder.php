@@ -21,8 +21,6 @@ class DatabaseSeeder extends Seeder
 
             SettingSeeder::class,
            
-            UserTypeSeeder::class,
-             FaqSeeder::class,
-         ]);
+           ]);
     }
 }

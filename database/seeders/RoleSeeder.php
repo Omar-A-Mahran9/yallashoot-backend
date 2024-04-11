@@ -26,6 +26,7 @@ class RoleSeeder extends Seeder
             'continents',
             'games',
             'playground',
+            'channel',
             'league',
             'team',
             'roles',
@@ -37,8 +38,7 @@ class RoleSeeder extends Seeder
             'settings',
             'news_subscribers',
             'slider_dashboard',
-            'recycle_bin',
-        ];
+         ];
 
         $actions =
         [
