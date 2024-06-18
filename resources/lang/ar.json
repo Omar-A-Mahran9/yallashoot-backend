@@ -39,8 +39,25 @@
   "Enter the playgrounds title in english": "ادخل عنوان ملعب بالانجليزية",
   "Enter the playgrounds title in arabic": "ادخل عنوان ملعب بالعربية",
   "playground added successfully": "تم اضافة ملعب بنجاح",
+  "Choose the playground": "اختر الملعب المقام فيه المباراة",
+  "Choose the league": "اختر الدوري",
+
+  "Games": "المباريات",
+  "game": "المباراة",
+  "Games list": "قائمة المباريات",
+  "Add new game": "اضافة مباراة جديد",
+  "team number one": "الفريق الأول",
+  "team number two": "الفريق الثاني",
+
+  "Choose the team number one": "اختر الفريق الأول",
+  "Choose the team number two": "اختر الفريق الثاني",
+
+  "Edit game": "تعديل مباراة ",
+  "Show game": "مشاهدة مباراة ",
+  "game added successfully": "تم اضافة ملعب بنجاح",
 
   "Channels": "القنوات",
+
   "Frequency": "التردد",
   "Modulation": "الترميز",
   "Correction": "التصحيح",
@@ -62,9 +79,22 @@
   "commenter": "المعلق",
   "Enter the Commenter's name in arabic": "ادخل اسم المعلق بالعربية",
   "Satellite and terrestrial frequencies": "الترددات الفضائية والأرضية",
-
+  "Choose the channel": "اختر القناة",
   "Choose the country": "اختر الدولة",
+  "Choose the statue": "اختر حالة المباراة",
+  "statue": "الحالة",
   "country": "الدولة",
+  "Game Start Time": "وقت بداية المباراة",
+  "Game End Time": "وقت نهاية المباراة",
+  "Game Date": "تاريخ المباراة",
+  "Enter start time": "ادخل بداية الوقت",
+  "Enter end time": "ادخل نهاية الوقت",
+
+  "Enter Game Date": "ادخل تاريخ المباراة",
+  "Enter Game Time": "ادخل وقت المباراة",
+
+  "Game Time": "وقت المباراة",
+
   "Country": "الدولة",
   "countries": "الدول",
   "Countries list": "قائمة الدول",
@@ -983,6 +1013,7 @@
   "Enter the google maps url": "ادخل رابط خرائط جوجل",
   "Blocked": "محظور",
   "Pending": "قيد الانتظار",
+  "pending": "قيد الانتظار",
   "Approved": "تم الموافقة",
   "Rejected": "مرفوض",
   "Car Body": "هيكل السيارة",

@@ -30,4 +30,8 @@ class channel extends Model
     {
         return $this->attributes['commenter_name_' . getLocale()];
     }
+    public function games()
+    {
+        return $this->belongsToMany(Game::class);
+    }
 }

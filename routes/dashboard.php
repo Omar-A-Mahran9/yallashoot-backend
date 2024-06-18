@@ -24,7 +24,7 @@ Route::group(['prefix' => 'dashboard', 'namespace' => 'Dashboard', 'as' => 'dash
     Route::resource('coache', 'CoachController');
     Route::resource('player', 'PlayerController');
     Route::resource('playground', 'PlaygroundController');
-    Route::resource('games', 'GamesController');
+    Route::resource('games', 'GameController');
     Route::resource('team', 'TeamController');
     Route::resource('channel', 'ChannelController');
 

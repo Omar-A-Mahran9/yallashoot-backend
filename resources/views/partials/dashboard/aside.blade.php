@@ -4,12 +4,7 @@
     data-kt-drawer-toggle="#kt_aside_mobile_toggle">
     <!--begin::Brand-->
     <div class="aside-logo flex-column-auto" id="kt_aside_logo">
-        <!--begin::Logo-->
-        <a href="https://codecar.webstdy.com/">
-            <img alt="Logo" src="{{ getImagePathFromDirectory(settings()->getSettings('logo'), 'Settings') }}"
-                class="h-35px logo" />
-        </a>
-        <!--end::Logo-->
+
         <!--begin::Aside toggler-->
         <div id="kt_aside_toggle" class="btn btn-icon w-auto px-0 btn-active-color-primary aside-toggle"
             data-kt-toggle="true" data-kt-toggle-state="active" data-kt-toggle-target="body"
@@ -119,11 +114,23 @@
                             data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click"
                             data-bs-placement="right">
                             <span class="menu-icon">
-                                <i
-                                    class="fas fa-check-circle"></i>
+                                <i class="fas fa-check-circle"></i>
                             </span>
                             <span class="menu-title">
-                                    {{ __('channels') }}</span>
+                                {{ __('channels') }}</span>
+                        </a>
+                    </div>
+                @endcan
+
+                @can('view_league')
+                    <div class="menu-item">
+                        <a class="menu-link {{ isTabActive('league') }}" href="{{ route('dashboard.league.index') }}"
+                            data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click"
+                            data-bs-placement="right">
+                            <span class="menu-icon">
+                                <i class="fa fa-futbol"></i>
+                            </span>
+                            <span class="menu-title"> {{ __('League') }}</span>
                         </a>
                     </div>
                 @endcan
@@ -136,18 +143,6 @@
                                 <i class="fa fa-gamepad"></i>
                             </span>
                             <span class="menu-title"> {{ __('games') }}</span>
-                        </a>
-                    </div>
-                @endcan
-                @can('view_league')
-                    <div class="menu-item">
-                        <a class="menu-link {{ isTabActive('league') }}" href="{{ route('dashboard.league.index') }}"
-                            data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click"
-                            data-bs-placement="right">
-                            <span class="menu-icon">
-                                <i class="fa fa-futbol"></i>
-                            </span>
-                            <span class="menu-title"> {{ __('League') }}</span>
                         </a>
                     </div>
                 @endcan

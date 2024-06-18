@@ -14,6 +14,7 @@ let translations = {
     "No, Cancel": "لا , ألغي",
     "something went wrong": "حدث خطأ ما",
     "Error !": "خطـأ !",
+    game: "المباراة",
     channel: "القناة",
     league: "الدوري",
     leagues: "الدوري",
