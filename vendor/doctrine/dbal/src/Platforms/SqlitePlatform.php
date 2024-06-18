@@ -159,13 +159,13 @@ class SqlitePlatform extends AbstractPlatform
 
         switch ($unit) {
             case DateIntervalUnit::WEEK:
-                $interval *= 7;
-                $unit      = DateIntervalUnit::DAY;
+                $interval = $this->multiplyInterval((string) $interval, 7);
+                $unit     = DateIntervalUnit::DAY;
                 break;
 
             case DateIntervalUnit::QUARTER:
-                $interval *= 3;
-                $unit      = DateIntervalUnit::MONTH;
+                $interval = $this->multiplyInterval((string) $interval, 3);
+                $unit     = DateIntervalUnit::MONTH;
                 break;
         }
 
@@ -1150,7 +1150,12 @@ class SqlitePlatform extends AbstractPlatform
         $sql      = [];
         $tableSql = [];
         if (! $this->onSchemaAlterTable($diff, $tableSql)) {
-            $dataTable = new Table('__temp__' . $table->getName());
+            $tableName = $table->getName();
+            if (strpos($tableName, '.') !== false) {
+                [, $tableName] = explode('.', $tableName, 2);
+            }
+
+            $dataTable = new Table('__temp__' . $tableName);
 
             $newTable = new Table(
                 $table->getQuotedName($this),

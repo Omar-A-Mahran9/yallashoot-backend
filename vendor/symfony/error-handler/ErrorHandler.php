@@ -457,7 +457,7 @@ class ErrorHandler
                 return true;
             }
         } else {
-            if (false !== strpos($message, '@anonymous')) {
+            if (PHP_VERSION_ID < 80303 && false !== strpos($message, '@anonymous')) {
                 $backtrace = debug_backtrace(false, 5);
 
                 for ($i = 1; isset($backtrace[$i]); ++$i) {
@@ -465,13 +465,17 @@ class ErrorHandler
                         && ('trigger_error' === $backtrace[$i]['function'] || 'user_error' === $backtrace[$i]['function'])
                     ) {
                         if ($backtrace[$i]['args'][0] !== $message) {
-                            $message = $this->parseAnonymousClass($backtrace[$i]['args'][0]);
-                            $logMessage = $this->levels[$type].': '.$message;
+                            $message = $backtrace[$i]['args'][0];
                         }
 
                         break;
                     }
                 }
+            }
+
+            if (false !== strpos($message, "@anonymous\0")) {
+                $message = $this->parseAnonymousClass($message);
+                $logMessage = $this->levels[$type].': '.$message;
             }
 
             $errorAsException = new \ErrorException($logMessage, 0, $type, $file, $line);
@@ -513,7 +517,12 @@ class ErrorHandler
                         }
 
                         // Display the original error message instead of the default one.
-                        $this->handleException($errorAsException);
+                        $exitCode = self::$exitCode;
+                        try {
+                            $this->handleException($errorAsException);
+                        } finally {
+                            self::$exitCode = $exitCode;
+                        }
 
                         // Stop the process by giving back the error to the native handler.
                         return false;
@@ -665,6 +674,10 @@ class ErrorHandler
             set_exception_handler($h);
         }
         if (!$handler) {
+            if (null === $error && $exitCode = self::$exitCode) {
+                register_shutdown_function('register_shutdown_function', function () use ($exitCode) { exit($exitCode); });
+            }
+
             return;
         }
         if ($handler !== $h) {
@@ -700,8 +713,7 @@ class ErrorHandler
             // Ignore this re-throw
         }
 
-        if ($exit && self::$exitCode) {
-            $exitCode = self::$exitCode;
+        if ($exit && $exitCode = self::$exitCode) {
             register_shutdown_function('register_shutdown_function', function () use ($exitCode) { exit($exitCode); });
         }
     }

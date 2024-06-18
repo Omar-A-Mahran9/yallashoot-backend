@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitc8a624e9866e4b49df806f199854d380
+class ComposerStaticInit754ccdd8c8b212acf19618d48d86fa17
 {
     public static $files = array (
         'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
@@ -59,7 +59,6 @@ class ComposerStaticInitc8a624e9866e4b49df806f199854d380
         'W' => 
         array (
             'Whoops\\' => 7,
-            'Webstdy\\Notification\\' => 21,
             'Webmozart\\Assert\\' => 17,
         ),
         'T' => 
@@ -228,10 +227,6 @@ class ComposerStaticInitc8a624e9866e4b49df806f199854d380
         'Whoops\\' => 
         array (
             0 => __DIR__ . '/..' . '/filp/whoops/src/Whoops',
-        ),
-        'Webstdy\\Notification\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/webstdy/notification/src',
         ),
         'Webmozart\\Assert\\' => 
         array (
@@ -649,32 +644,10 @@ class ComposerStaticInitc8a624e9866e4b49df806f199854d380
 
     public static $classMap = array (
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
-        'App\\Enums\\CarStatus' => __DIR__ . '/../..' . '/app/Enums/CarStatus.php',
-        'App\\Enums\\CareerWorkType' => __DIR__ . '/../..' . '/app/Enums/CareerWorkType.php',
+        'App\\Enums\\GameStatus' => __DIR__ . '/../..' . '/app/Enums/GameStatus.php',
         'App\\Enums\\VendorStatus' => __DIR__ . '/../..' . '/app/Enums/VendorStatus.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Classes\\AppSetting' => __DIR__ . '/../..' . '/app/Http/Classes/AppSetting.php',
-        'App\\Http\\Controllers\\Api\\AdsController' => __DIR__ . '/../..' . '/app/Http/Controllers/Api/AdsController.php',
-        'App\\Http\\Controllers\\Api\\Auth\\AuthController' => __DIR__ . '/../..' . '/app/Http/Controllers/Api/Auth/AuthController.php',
-        'App\\Http\\Controllers\\Api\\Auth\\ForgetPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Api/Auth/ForgetPasswordController.php',
-        'App\\Http\\Controllers\\Api\\Auth\\VerificationController' => __DIR__ . '/../..' . '/app/Http/Controllers/Api/Auth/VerificationController.php',
-        'App\\Http\\Controllers\\Api\\CarController' => __DIR__ . '/../..' . '/app/Http/Controllers/Api/CarController.php',
-        'App\\Http\\Controllers\\Api\\CareerController' => __DIR__ . '/../..' . '/app/Http/Controllers/Api/CareerController.php',
-        'App\\Http\\Controllers\\Api\\CategoryController' => __DIR__ . '/../..' . '/app/Http/Controllers/Api/CategoryController.php',
-        'App\\Http\\Controllers\\Api\\ContactController' => __DIR__ . '/../..' . '/app/Http/Controllers/Api/ContactController.php',
-        'App\\Http\\Controllers\\Api\\FavoriteController' => __DIR__ . '/../..' . '/app/Http/Controllers/Api/FavoriteController.php',
-        'App\\Http\\Controllers\\Api\\FinanceController' => __DIR__ . '/../..' . '/app/Http/Controllers/Api/FinanceController.php',
-        'App\\Http\\Controllers\\Api\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/Api/HomeController.php',
-        'App\\Http\\Controllers\\Api\\NewsController' => __DIR__ . '/../..' . '/app/Http/Controllers/Api/NewsController.php',
-        'App\\Http\\Controllers\\Api\\OfferController' => __DIR__ . '/../..' . '/app/Http/Controllers/Api/OfferController.php',
-        'App\\Http\\Controllers\\Api\\RequestController' => __DIR__ . '/../..' . '/app/Http/Controllers/Api/RequestController.php',
-        'App\\Http\\Controllers\\Api\\SearchController' => __DIR__ . '/../..' . '/app/Http/Controllers/Api/SearchController.php',
-        'App\\Http\\Controllers\\Api\\SettingController' => __DIR__ . '/../..' . '/app/Http/Controllers/Api/SettingController.php',
-        'App\\Http\\Controllers\\Api\\SubscriberController' => __DIR__ . '/../..' . '/app/Http/Controllers/Api/SubscriberController.php',
-        'App\\Http\\Controllers\\Api\\UserController' => __DIR__ . '/../..' . '/app/Http/Controllers/Api/UserController.php',
-        'App\\Http\\Controllers\\Api\\VendorController' => __DIR__ . '/../..' . '/app/Http/Controllers/Api/VendorController.php',
-        'App\\Http\\Controllers\\Api\\citiyController' => __DIR__ . '/../..' . '/app/Http/Controllers/Api/citiyController.php',
-        'App\\Http\\Controllers\\Api\\financecalc' => __DIR__ . '/../..' . '/app/Http/Controllers/Api/financecalc.php',
         'App\\Http\\Controllers\\Auth\\EmployeeAuthController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/EmployeeAuthController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\Dashboard\\CarController' => __DIR__ . '/../..' . '/app/Http/Controllers/Dashboard/CarController.php',
@@ -685,6 +658,7 @@ class ComposerStaticInitc8a624e9866e4b49df806f199854d380
         'App\\Http\\Controllers\\Dashboard\\CountryController' => __DIR__ . '/../..' . '/app/Http/Controllers/Dashboard/CountryController.php',
         'App\\Http\\Controllers\\Dashboard\\DashboardController' => __DIR__ . '/../..' . '/app/Http/Controllers/Dashboard/DashboardController.php',
         'App\\Http\\Controllers\\Dashboard\\EmployeeController' => __DIR__ . '/../..' . '/app/Http/Controllers/Dashboard/EmployeeController.php',
+        'App\\Http\\Controllers\\Dashboard\\GameController' => __DIR__ . '/../..' . '/app/Http/Controllers/Dashboard/GameController.php',
         'App\\Http\\Controllers\\Dashboard\\LeagueController' => __DIR__ . '/../..' . '/app/Http/Controllers/Dashboard/LeagueController.php',
         'App\\Http\\Controllers\\Dashboard\\NewsController' => __DIR__ . '/../..' . '/app/Http/Controllers/Dashboard/NewsController.php',
         'App\\Http\\Controllers\\Dashboard\\NewsSubscriberController' => __DIR__ . '/../..' . '/app/Http/Controllers/Dashboard/NewsSubscriberController.php',
@@ -725,6 +699,7 @@ class ComposerStaticInitc8a624e9866e4b49df806f199854d380
         'App\\Http\\Requests\\Dashboard\\StoreContinentsRequest' => __DIR__ . '/../..' . '/app/Http/Requests/Dashboard/StoreContinentsRequest.php',
         'App\\Http\\Requests\\Dashboard\\StoreCountriesRequest' => __DIR__ . '/../..' . '/app/Http/Requests/Dashboard/StoreCountriesRequest.php',
         'App\\Http\\Requests\\Dashboard\\StoreDelegatesRequest' => __DIR__ . '/../..' . '/app/Http/Requests/Dashboard/StoreDelegatesRequest.php',
+        'App\\Http\\Requests\\Dashboard\\StoreGameRequest' => __DIR__ . '/../..' . '/app/Http/Requests/Dashboard/StoreGameRequest.php',
         'App\\Http\\Requests\\Dashboard\\StoreLeagueRequest' => __DIR__ . '/../..' . '/app/Http/Requests/Dashboard/StoreLeagueRequest.php',
         'App\\Http\\Requests\\Dashboard\\StoreModelRequest' => __DIR__ . '/../..' . '/app/Http/Requests/Dashboard/StoreModelRequest.php',
         'App\\Http\\Requests\\Dashboard\\StoreNewsRequest' => __DIR__ . '/../..' . '/app/Http/Requests/Dashboard/StoreNewsRequest.php',
@@ -737,6 +712,7 @@ class ComposerStaticInitc8a624e9866e4b49df806f199854d380
         'App\\Http\\Requests\\Dashboard\\UpdateContinentsRequest' => __DIR__ . '/../..' . '/app/Http/Requests/Dashboard/UpdateContinentsRequest.php',
         'App\\Http\\Requests\\Dashboard\\UpdateCountriesRequest' => __DIR__ . '/../..' . '/app/Http/Requests/Dashboard/UpdateCountriesRequest.php',
         'App\\Http\\Requests\\Dashboard\\UpdateEmployeeRequest' => __DIR__ . '/../..' . '/app/Http/Requests/Dashboard/UpdateEmployeeRequest.php',
+        'App\\Http\\Requests\\Dashboard\\UpdateGameRequest' => __DIR__ . '/../..' . '/app/Http/Requests/Dashboard/UpdateGameRequest.php',
         'App\\Http\\Requests\\Dashboard\\UpdateLeagueRequest' => __DIR__ . '/../..' . '/app/Http/Requests/Dashboard/UpdateLeagueRequest.php',
         'App\\Http\\Requests\\Dashboard\\UpdateNewsRequest' => __DIR__ . '/../..' . '/app/Http/Requests/Dashboard/UpdateNewsRequest.php',
         'App\\Http\\Requests\\Dashboard\\UpdatePlayersRequest' => __DIR__ . '/../..' . '/app/Http/Requests/Dashboard/UpdatePlayersRequest.php',
@@ -1027,6 +1003,11 @@ class ComposerStaticInitc8a624e9866e4b49df806f199854d380
         'DebugBar\\Bridge\\SwiftMailer\\SwiftMailCollector' => __DIR__ . '/..' . '/maximebf/debugbar/src/DebugBar/Bridge/SwiftMailer/SwiftMailCollector.php',
         'DebugBar\\Bridge\\Symfony\\SymfonyMailCollector' => __DIR__ . '/..' . '/maximebf/debugbar/src/DebugBar/Bridge/Symfony/SymfonyMailCollector.php',
         'DebugBar\\Bridge\\TwigProfileCollector' => __DIR__ . '/..' . '/maximebf/debugbar/src/DebugBar/Bridge/TwigProfileCollector.php',
+        'DebugBar\\Bridge\\Twig\\DebugTwigExtension' => __DIR__ . '/..' . '/maximebf/debugbar/src/DebugBar/Bridge/Twig/DebugTwigExtension.php',
+        'DebugBar\\Bridge\\Twig\\DumpTwigExtension' => __DIR__ . '/..' . '/maximebf/debugbar/src/DebugBar/Bridge/Twig/DumpTwigExtension.php',
+        'DebugBar\\Bridge\\Twig\\MeasureTwigExtension' => __DIR__ . '/..' . '/maximebf/debugbar/src/DebugBar/Bridge/Twig/MeasureTwigExtension.php',
+        'DebugBar\\Bridge\\Twig\\MeasureTwigNode' => __DIR__ . '/..' . '/maximebf/debugbar/src/DebugBar/Bridge/Twig/MeasureTwigNode.php',
+        'DebugBar\\Bridge\\Twig\\MeasureTwigTokenParser' => __DIR__ . '/..' . '/maximebf/debugbar/src/DebugBar/Bridge/Twig/MeasureTwigTokenParser.php',
         'DebugBar\\Bridge\\Twig\\TimeableTwigExtensionProfiler' => __DIR__ . '/..' . '/maximebf/debugbar/src/DebugBar/Bridge/Twig/TimeableTwigExtensionProfiler.php',
         'DebugBar\\Bridge\\Twig\\TraceableTwigEnvironment' => __DIR__ . '/..' . '/maximebf/debugbar/src/DebugBar/Bridge/Twig/TraceableTwigEnvironment.php',
         'DebugBar\\Bridge\\Twig\\TraceableTwigTemplate' => __DIR__ . '/..' . '/maximebf/debugbar/src/DebugBar/Bridge/Twig/TraceableTwigTemplate.php',
@@ -1041,6 +1022,7 @@ class ComposerStaticInitc8a624e9866e4b49df806f199854d380
         'DebugBar\\DataCollector\\MemoryCollector' => __DIR__ . '/..' . '/maximebf/debugbar/src/DebugBar/DataCollector/MemoryCollector.php',
         'DebugBar\\DataCollector\\MessagesAggregateInterface' => __DIR__ . '/..' . '/maximebf/debugbar/src/DebugBar/DataCollector/MessagesAggregateInterface.php',
         'DebugBar\\DataCollector\\MessagesCollector' => __DIR__ . '/..' . '/maximebf/debugbar/src/DebugBar/DataCollector/MessagesCollector.php',
+        'DebugBar\\DataCollector\\ObjectCountCollector' => __DIR__ . '/..' . '/maximebf/debugbar/src/DebugBar/DataCollector/ObjectCountCollector.php',
         'DebugBar\\DataCollector\\PDO\\PDOCollector' => __DIR__ . '/..' . '/maximebf/debugbar/src/DebugBar/DataCollector/PDO/PDOCollector.php',
         'DebugBar\\DataCollector\\PDO\\TraceablePDO' => __DIR__ . '/..' . '/maximebf/debugbar/src/DebugBar/DataCollector/PDO/TraceablePDO.php',
         'DebugBar\\DataCollector\\PDO\\TraceablePDOStatement' => __DIR__ . '/..' . '/maximebf/debugbar/src/DebugBar/DataCollector/PDO/TraceablePDOStatement.php',
@@ -1052,6 +1034,8 @@ class ComposerStaticInitc8a624e9866e4b49df806f199854d380
         'DebugBar\\DataFormatter\\DataFormatter' => __DIR__ . '/..' . '/maximebf/debugbar/src/DebugBar/DataFormatter/DataFormatter.php',
         'DebugBar\\DataFormatter\\DataFormatterInterface' => __DIR__ . '/..' . '/maximebf/debugbar/src/DebugBar/DataFormatter/DataFormatterInterface.php',
         'DebugBar\\DataFormatter\\DebugBarVarDumper' => __DIR__ . '/..' . '/maximebf/debugbar/src/DebugBar/DataFormatter/DebugBarVarDumper.php',
+        'DebugBar\\DataFormatter\\HasDataFormatter' => __DIR__ . '/..' . '/maximebf/debugbar/src/DebugBar/DataFormatter/HasDataFormatter.php',
+        'DebugBar\\DataFormatter\\HasXdebugLinks' => __DIR__ . '/..' . '/maximebf/debugbar/src/DebugBar/DataFormatter/HasXdebugLinks.php',
         'DebugBar\\DataFormatter\\VarDumper\\DebugBarHtmlDumper' => __DIR__ . '/..' . '/maximebf/debugbar/src/DebugBar/DataFormatter/VarDumper/DebugBarHtmlDumper.php',
         'DebugBar\\DebugBar' => __DIR__ . '/..' . '/maximebf/debugbar/src/DebugBar/DebugBar.php',
         'DebugBar\\DebugBarException' => __DIR__ . '/..' . '/maximebf/debugbar/src/DebugBar/DebugBarException.php',
@@ -4007,6 +3991,7 @@ class ComposerStaticInitc8a624e9866e4b49df806f199854d380
         'Mockery\\CountValidator\\AtLeast' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/CountValidator/AtLeast.php',
         'Mockery\\CountValidator\\AtMost' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/CountValidator/AtMost.php',
         'Mockery\\CountValidator\\CountValidatorAbstract' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/CountValidator/CountValidatorAbstract.php',
+        'Mockery\\CountValidator\\CountValidatorInterface' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/CountValidator/CountValidatorInterface.php',
         'Mockery\\CountValidator\\Exact' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/CountValidator/Exact.php',
         'Mockery\\CountValidator\\Exception' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/CountValidator/Exception.php',
         'Mockery\\Exception' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/Exception.php',
@@ -4570,6 +4555,9 @@ class ComposerStaticInitc8a624e9866e4b49df806f199854d380
         'PHPStan\\PhpDocParser\\Ast\\PhpDoc\\MethodTagValueNode' => __DIR__ . '/..' . '/phpstan/phpdoc-parser/src/Ast/PhpDoc/MethodTagValueNode.php',
         'PHPStan\\PhpDocParser\\Ast\\PhpDoc\\MethodTagValueParameterNode' => __DIR__ . '/..' . '/phpstan/phpdoc-parser/src/Ast/PhpDoc/MethodTagValueParameterNode.php',
         'PHPStan\\PhpDocParser\\Ast\\PhpDoc\\MixinTagValueNode' => __DIR__ . '/..' . '/phpstan/phpdoc-parser/src/Ast/PhpDoc/MixinTagValueNode.php',
+        'PHPStan\\PhpDocParser\\Ast\\PhpDoc\\ParamClosureThisTagValueNode' => __DIR__ . '/..' . '/phpstan/phpdoc-parser/src/Ast/PhpDoc/ParamClosureThisTagValueNode.php',
+        'PHPStan\\PhpDocParser\\Ast\\PhpDoc\\ParamImmediatelyInvokedCallableTagValueNode' => __DIR__ . '/..' . '/phpstan/phpdoc-parser/src/Ast/PhpDoc/ParamImmediatelyInvokedCallableTagValueNode.php',
+        'PHPStan\\PhpDocParser\\Ast\\PhpDoc\\ParamLaterInvokedCallableTagValueNode' => __DIR__ . '/..' . '/phpstan/phpdoc-parser/src/Ast/PhpDoc/ParamLaterInvokedCallableTagValueNode.php',
         'PHPStan\\PhpDocParser\\Ast\\PhpDoc\\ParamOutTagValueNode' => __DIR__ . '/..' . '/phpstan/phpdoc-parser/src/Ast/PhpDoc/ParamOutTagValueNode.php',
         'PHPStan\\PhpDocParser\\Ast\\PhpDoc\\ParamTagValueNode' => __DIR__ . '/..' . '/phpstan/phpdoc-parser/src/Ast/PhpDoc/ParamTagValueNode.php',
         'PHPStan\\PhpDocParser\\Ast\\PhpDoc\\PhpDocChildNode' => __DIR__ . '/..' . '/phpstan/phpdoc-parser/src/Ast/PhpDoc/PhpDocChildNode.php',
@@ -5008,6 +4996,7 @@ class ComposerStaticInitc8a624e9866e4b49df806f199854d380
         'PharIo\\Manifest\\ManifestLoader' => __DIR__ . '/..' . '/phar-io/manifest/src/ManifestLoader.php',
         'PharIo\\Manifest\\ManifestLoaderException' => __DIR__ . '/..' . '/phar-io/manifest/src/exceptions/ManifestLoaderException.php',
         'PharIo\\Manifest\\ManifestSerializer' => __DIR__ . '/..' . '/phar-io/manifest/src/ManifestSerializer.php',
+        'PharIo\\Manifest\\NoEmailAddressException' => __DIR__ . '/..' . '/phar-io/manifest/src/exceptions/NoEmailAddressException.php',
         'PharIo\\Manifest\\PhpElement' => __DIR__ . '/..' . '/phar-io/manifest/src/xml/PhpElement.php',
         'PharIo\\Manifest\\PhpExtensionRequirement' => __DIR__ . '/..' . '/phar-io/manifest/src/values/PhpExtensionRequirement.php',
         'PharIo\\Manifest\\PhpVersionRequirement' => __DIR__ . '/..' . '/phar-io/manifest/src/values/PhpVersionRequirement.php',
@@ -5942,6 +5931,7 @@ class ComposerStaticInitc8a624e9866e4b49df806f199854d380
         'Svg\\Tag\\Shape' => __DIR__ . '/..' . '/phenx/php-svg-lib/src/Svg/Tag/Shape.php',
         'Svg\\Tag\\Stop' => __DIR__ . '/..' . '/phenx/php-svg-lib/src/Svg/Tag/Stop.php',
         'Svg\\Tag\\StyleTag' => __DIR__ . '/..' . '/phenx/php-svg-lib/src/Svg/Tag/StyleTag.php',
+        'Svg\\Tag\\Symbol' => __DIR__ . '/..' . '/phenx/php-svg-lib/src/Svg/Tag/Symbol.php',
         'Svg\\Tag\\Text' => __DIR__ . '/..' . '/phenx/php-svg-lib/src/Svg/Tag/Text.php',
         'Svg\\Tag\\UseTag' => __DIR__ . '/..' . '/phenx/php-svg-lib/src/Svg/Tag/UseTag.php',
         'Symfony\\Component\\Console\\Application' => __DIR__ . '/..' . '/symfony/console/Application.php',
@@ -6723,7 +6713,9 @@ class ComposerStaticInitc8a624e9866e4b49df806f199854d380
         'Symfony\\Contracts\\Service\\Attribute\\Required' => __DIR__ . '/..' . '/symfony/service-contracts/Attribute/Required.php',
         'Symfony\\Contracts\\Service\\Attribute\\SubscribedService' => __DIR__ . '/..' . '/symfony/service-contracts/Attribute/SubscribedService.php',
         'Symfony\\Contracts\\Service\\ResetInterface' => __DIR__ . '/..' . '/symfony/service-contracts/ResetInterface.php',
+        'Symfony\\Contracts\\Service\\ServiceCollectionInterface' => __DIR__ . '/..' . '/symfony/service-contracts/ServiceCollectionInterface.php',
         'Symfony\\Contracts\\Service\\ServiceLocatorTrait' => __DIR__ . '/..' . '/symfony/service-contracts/ServiceLocatorTrait.php',
+        'Symfony\\Contracts\\Service\\ServiceMethodsSubscriberTrait' => __DIR__ . '/..' . '/symfony/service-contracts/ServiceMethodsSubscriberTrait.php',
         'Symfony\\Contracts\\Service\\ServiceProviderInterface' => __DIR__ . '/..' . '/symfony/service-contracts/ServiceProviderInterface.php',
         'Symfony\\Contracts\\Service\\ServiceSubscriberInterface' => __DIR__ . '/..' . '/symfony/service-contracts/ServiceSubscriberInterface.php',
         'Symfony\\Contracts\\Service\\ServiceSubscriberTrait' => __DIR__ . '/..' . '/symfony/service-contracts/ServiceSubscriberTrait.php',
@@ -6767,11 +6759,6 @@ class ComposerStaticInitc8a624e9866e4b49df806f199854d380
         'Webmozart\\Assert\\Assert' => __DIR__ . '/..' . '/webmozart/assert/src/Assert.php',
         'Webmozart\\Assert\\InvalidArgumentException' => __DIR__ . '/..' . '/webmozart/assert/src/InvalidArgumentException.php',
         'Webmozart\\Assert\\Mixin' => __DIR__ . '/..' . '/webmozart/assert/src/Mixin.php',
-        'Webstdy\\Notification\\Models\\Employee' => __DIR__ . '/..' . '/webstdy/notification/src/Models/Employee.php',
-        'Webstdy\\Notification\\NewNotification' => __DIR__ . '/..' . '/webstdy/notification/src/NewNotification.php',
-        'Webstdy\\Notification\\NotificationActions' => __DIR__ . '/..' . '/webstdy/notification/src/NotificationActions.php',
-        'Webstdy\\Notification\\NotificationController' => __DIR__ . '/..' . '/webstdy/notification/src/NotificationController.php',
-        'Webstdy\\Notification\\NotificationServiceProvider' => __DIR__ . '/..' . '/webstdy/notification/src/NotificationServiceProvider.php',
         'Whoops\\Exception\\ErrorException' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Exception/ErrorException.php',
         'Whoops\\Exception\\Formatter' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Exception/Formatter.php',
         'Whoops\\Exception\\Frame' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Exception/Frame.php',
@@ -6913,10 +6900,10 @@ class ComposerStaticInitc8a624e9866e4b49df806f199854d380
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitc8a624e9866e4b49df806f199854d380::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitc8a624e9866e4b49df806f199854d380::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInitc8a624e9866e4b49df806f199854d380::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInitc8a624e9866e4b49df806f199854d380::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit754ccdd8c8b212acf19618d48d86fa17::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit754ccdd8c8b212acf19618d48d86fa17::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit754ccdd8c8b212acf19618d48d86fa17::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit754ccdd8c8b212acf19618d48d86fa17::$classMap;
 
         }, null, ClassLoader::class);
     }

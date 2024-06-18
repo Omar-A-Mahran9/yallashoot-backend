@@ -227,7 +227,7 @@ the same filename as the one you attached::
     $message->attach(Swift_Attachment::fromPath('/path/to/image.jpg'));
 
     // You can attach files from a URL if allow_url_fopen is on in php.ini
-    $message->attach(Swift_Attachment::fromPath('http://site.tld/logo.svg'));
+    $message->attach(Swift_Attachment::fromPath('http://site.tld/logo.png'));
 
 Setting the Filename
 ~~~~~~~~~~~~~~~~~~~~
@@ -368,7 +368,7 @@ is used as a ``src`` attribute::
     '<html>' .
     ' <body>' .
     '  Here is an image <img src="' .
-         $message->embed(Swift_Image::fromPath('http://site.tld/logo.svg')) .
+         $message->embed(Swift_Image::fromPath('http://site.tld/logo.png')) .
        '" alt="Image" />' .
     '  Rest of message' .
     ' </body>' .
