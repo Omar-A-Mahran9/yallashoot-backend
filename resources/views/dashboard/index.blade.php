@@ -21,8 +21,8 @@
             <div class="d-flex align-items-center gap-2 gap-lg-3">
 
                 <!--begin::Primary button-->
-                <a href="https://codecar.webstdy.com/" target="_blank" class="btn btn-sm btn-primary"><i
-                        class="bi bi-globe fs-6"></i> {{ __('website') }} </a>
+                <a href="/" target="_blank" class="btn btn-sm btn-primary"><i class="bi bi-globe fs-6"></i>
+                    {{ __('website') }} </a>
                 <!--end::Primary button-->
 
                 <!--begin::Primary button-->

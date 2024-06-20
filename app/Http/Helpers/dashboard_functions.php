@@ -411,7 +411,7 @@ if(!function_exists('pushNotification')) {
         $token = "e4vHwxheBK6uujxk7G9I";
         $src = 'CODE CAR';
         $dests = "$phone";
-        $appName = settings()->getSettings("website_name_" . getLocale()) ?? "CodeCar";
+        $appName = settings()->getSettings("website_name_" . getLocale()) ?? "KoraLive";
 
         $body = <<<msg
                 مرحبًا بك في $appName ! رمز التسجيل: $otp
