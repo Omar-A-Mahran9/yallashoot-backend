@@ -41,7 +41,7 @@
             width: 100%;
             height: 100%;
             z-index: 99;
-            background: url('{{ asset('ajax-loader.gif') }}') center no-repeat #fff;
+            background: center no-repeat #fff;
             background-size: 20%;
         }
     </style>
